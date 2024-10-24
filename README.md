@@ -119,7 +119,7 @@ Al ejecutar las pruebas nuevamente:
 
 
 
-Para ejecutar las pruebas unitarias  implementadas con Jest.
+### **Para ejecutar las pruebas unitarias implementadas con Jest**
 
 1.-Asegúrate de que las dependencias estén instaladas.
 

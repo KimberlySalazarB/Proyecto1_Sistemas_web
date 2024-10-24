@@ -45,7 +45,7 @@ export class ValidacionContext<T>{
      * @param {T} value - El valor a validar (tipo generico).
      * @returns {boolean} El resultado de la validación.
      */
-    
+
     validar(value: T): boolean {
         return this.strategy.validar(value);
       }

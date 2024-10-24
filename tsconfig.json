@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es6",     
     "esModuleInterop": true,
-    "module":"CommonJS",
+    "module":"ES6",
     "moduleResolution": "node",                              
     "noImplicitAny": true,
     "strict": true,    
@@ -13,6 +13,6 @@
   },
 
   "include": ["libreria/**/*.ts"],
-  "exclude": ["node_module","dist"]
+  "exclude": ["node_module"]
 
 }

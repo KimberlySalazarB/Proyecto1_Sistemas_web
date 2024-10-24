@@ -1,6 +1,6 @@
 
 import {NumberValidacionFactory,StringValidacionFactory,
-    ObjectValidacionFactory,DateValidacionFactory } from "../libreria";
+    ObjectValidacionFactory,DateValidacionFactory,NombreStringValidacionFactory } from "../libreria";
 
 // Descripción del bloque de pruebas
 describe('NumberValidacionFactory', () => {
@@ -51,5 +51,18 @@ describe('StringValidacionFactory',()=>{
 
         expect(esCadena).toBe(true);
         expect(noesCadena).toBe(false);
+    });
+
+    test('Debe validar una cadena de nombre',()=>{
+        const cadenanombre=new NombreStringValidacionFactory;
+        const esNombre=cadenanombre.realizarValidacion("Lupita");
+        const noesCadenaNombre=cadenanombre.realizarValidacion('');
+        const noesCadenaNombre2=cadenanombre.realizarValidacion('1L');
+        const noesCadenaNombre3=cadenanombre.realizarValidacion('1L34H');
+
+        expect(esNombre).toBe(true);
+        expect(noesCadenaNombre).toBe(false);
+        expect(noesCadenaNombre2).toBe(false);
+        expect(noesCadenaNombre3).toBe(false);
     });
 })

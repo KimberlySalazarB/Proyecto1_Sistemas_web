@@ -1,7 +1,7 @@
 import { ValidacionStrategy } from "./validacionStrategy";
 import { NumberValidacion} from "../validacion/numberValidacion";
 import { ObjectValidacion } from "../validacion/objectValidacion";
-import { StringValidacion} from "../validacion/stringValidacion";
+import { StringValidacion,NombreStringValidacion} from "../validacion/stringValidacion";
 import { DateValidacion } from "../validacion/dateValidacion";
 
 // Implementación del patrón Factory
@@ -42,6 +42,13 @@ export class StringValidacionFactory extends Creador<string> {
     public createValidacion(): ValidacionStrategy<string> {
       return new StringValidacion();
     }
+}
+
+// Implementación concreta del Factory para validación de nombres
+export class NombreStringValidacionFactory extends Creador<string> {
+  public createValidacion(): ValidacionStrategy<string> {
+    return new NombreStringValidacion();
+  }
 }
 
 

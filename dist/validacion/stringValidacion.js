@@ -42,4 +42,3 @@ export class NombreStringValidacion {
         return false; // La cadena es demasiado corta
     }
 }
-console.log("El módulo se ha ejecutado correctamente");

@@ -11,4 +11,3 @@ export class ObjectValidacion {
         return value !== null && typeof value == 'object';
     }
 }
-console.log("El módulo se ha ejecutado correctamente");

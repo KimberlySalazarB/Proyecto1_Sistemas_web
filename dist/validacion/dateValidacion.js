@@ -11,4 +11,3 @@ export class DateValidacion {
         return value instanceof Date && !isNaN(value.getTime());
     }
 }
-console.log("El módulo se ha ejecutado correctamente");

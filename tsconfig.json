@@ -13,6 +13,6 @@
   },
 
   "include": ["libreria/**/*.ts"],
-  "exclude": ["node_module"]
+  "exclude": ["node_module","dist"]
 
 }

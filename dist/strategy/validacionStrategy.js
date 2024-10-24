@@ -28,4 +28,3 @@ export class ValidacionContext {
         return this.strategy.validar(value);
     }
 }
-console.log("El módulo se ha ejecutado correctamente");

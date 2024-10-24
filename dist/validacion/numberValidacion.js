@@ -70,4 +70,3 @@ export class MayorQueNumberValidacion {
         return value > this.minValue;
     }
 }
-console.log("El módulo se ha ejecutado correctamente");

@@ -1,7 +1,7 @@
-import { NumberValidacion, PositivoNumberValidacion, ParNumberValidacion, ImparNumberValidacion, MayorQueNumberValidacion } from "../validacion/numberValidacion.js";
-import { ObjectValidacion } from "../validacion/objectValidacion.js";
-import { StringValidacion, NombreStringValidacion } from "../validacion/stringValidacion.js";
-import { DateValidacion } from "../validacion/dateValidacion.js";
+import { NumberValidacion, PositivoNumberValidacion, ParNumberValidacion, ImparNumberValidacion, MayorQueNumberValidacion } from "../validacion/numberValidacion";
+import { ObjectValidacion } from "../validacion/objectValidacion";
+import { StringValidacion, NombreStringValidacion } from "../validacion/stringValidacion";
+import { DateValidacion } from "../validacion/dateValidacion";
 /**
  * Clase abstracta que define el método Factory para crear estrategias de validación.
  * @template T El tipo de dato generico.
@@ -111,4 +111,3 @@ export class NombreStringValidacionFactory extends Creador {
         return new NombreStringValidacion();
     }
 }
-console.log("El módulo se ha ejecutado correctamente");

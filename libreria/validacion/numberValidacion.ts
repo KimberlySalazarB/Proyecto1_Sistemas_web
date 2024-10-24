@@ -9,3 +9,8 @@ export class NumberValidacion implements ValidacionStrategy<number>{
     }
 }
 
+export class PositivoNumberValidacion implements ValidacionStrategy<number>{
+    validar(value: number): boolean {
+        return value>0;
+    }
+}

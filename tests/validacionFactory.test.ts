@@ -1,5 +1,5 @@
 
-import {NumberValidacionFactory,StringValidacionFactory,
+import {NumberValidacionFactory,PositivoNumberValidacionFactory,StringValidacionFactory,
     ObjectValidacionFactory,DateValidacionFactory,NombreStringValidacionFactory } from "../libreria";
 
 // Descripción del bloque de pruebas
@@ -16,6 +16,34 @@ describe('NumberValidacionFactory', () => {
         const noesNumero= nonumeroFactory.realizarValidacion(NaN);
         expect(noesNumero).toBe(false);
     })
+
+    // Prueba para validar números positivos
+    test('debe validar correctamente un número positivo', () => {
+        // Crear una instancia de la factory
+        const positivoFactory = new PositivoNumberValidacionFactory();
+        const esPositivo = positivoFactory.realizarValidacion(10);
+        expect(esPositivo).toBe(true);
+    });
+
+    // Prueba para validar un número negativo 
+    test('debe fallar al validar un número negativo', () => {
+        // Crear una instancia de la factory
+        const positivoFactory = new PositivoNumberValidacionFactory();
+        // Ejecutar la validación con un número negativo
+        const esPositivo = positivoFactory.realizarValidacion(-5);
+        // Afirmar que la validación devuelve false
+        expect(esPositivo).toBe(false);
+    });
+
+    // Prueba para validar el cero (debería fallar la validación)
+    test('debe fallar al validar el número cero', () => {
+        // Crear una instancia de la factory
+        const positivoFactory = new PositivoNumberValidacionFactory();
+        // Ejecutar la validación con el número 0
+        const esPositivo = positivoFactory.realizarValidacion(0);
+        // Afirmar que la validación devuelve false
+        expect(esPositivo).toBe(false);
+    });
 });
 
 

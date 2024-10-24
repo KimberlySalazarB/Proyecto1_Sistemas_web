@@ -1,5 +1,5 @@
 import { ValidacionStrategy } from "./validacionStrategy";
-import { NumberValidacion} from "../validacion/numberValidacion";
+import { NumberValidacion,PositivoNumberValidacion} from "../validacion/numberValidacion";
 import { ObjectValidacion } from "../validacion/objectValidacion";
 import { StringValidacion,NombreStringValidacion} from "../validacion/stringValidacion";
 import { DateValidacion } from "../validacion/dateValidacion";
@@ -21,6 +21,13 @@ export class NumberValidacionFactory extends Creador<number> {
     public createValidacion(): ValidacionStrategy<number> {
       return new NumberValidacion();
     }
+}
+
+// Implementación concreta del Factory para validación de números positivos
+export class PositivoNumberValidacionFactory extends Creador<number> {
+  public createValidacion(): ValidacionStrategy<number> {
+    return new PositivoNumberValidacion();
+  }
 }
 
 // Implementación concreta del Factory para validación de objetos

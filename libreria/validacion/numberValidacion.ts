@@ -14,3 +14,17 @@ export class PositivoNumberValidacion implements ValidacionStrategy<number>{
         return value>0;
     }
 }
+
+// Estrategia de validar números pares
+export class ParNumberValidacion implements ValidacionStrategy<number> {
+    validar(value: number): boolean {
+      return value % 2 === 0;
+    }
+}
+
+// Estrategia de validar números impares
+export class ImparNumberValidacion implements ValidacionStrategy<number> {
+    validar(value: number): boolean {
+      return value % 2 !== 0;
+    }
+}

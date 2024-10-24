@@ -1,5 +1,5 @@
 
-import {NumberValidacionFactory,PositivoNumberValidacionFactory,StringValidacionFactory,
+import {NumberValidacionFactory,PositivoNumberValidacionFactory,ParNumberValidacionFactory,ImparNumberValidacionFactory,StringValidacionFactory,
     ObjectValidacionFactory,DateValidacionFactory,NombreStringValidacionFactory } from "../libreria";
 
 // Descripción del bloque de pruebas
@@ -43,6 +43,24 @@ describe('NumberValidacionFactory', () => {
         const esPositivo = positivoFactory.realizarValidacion(0);
         // Afirmar que la validación devuelve false
         expect(esPositivo).toBe(false);
+    });
+
+    //validación de números pares
+    test('Debe validar un número par', () => {
+        const pPar= new ParNumberValidacionFactory();
+        const esPar=pPar.realizarValidacion(2);
+        const noesPar=pPar.realizarValidacion(3);
+        expect(esPar).toBe(true);
+        expect(noesPar).toBe(false);
+    });
+
+    //validación de números impares
+    test('Debe validar un número impar', () => {
+        const Impar = new ImparNumberValidacionFactory();
+        const esImparPar=Impar.realizarValidacion(3);
+        const noesImparPar=Impar.realizarValidacion(2);
+        expect(esImparPar).toBe(true);
+        expect(noesImparPar).toBe(false);
     });
 });
 

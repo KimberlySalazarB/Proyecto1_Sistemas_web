@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1729732509010" clover="3.2.0">
-  <project timestamp="1729732509010" name="All files">
-    <metrics statements="54" coveredstatements="53" conditionals="19" coveredconditionals="19" methods="16" coveredmethods="15" elements="89" coveredelements="87" complexity="0" loc="54" ncloc="54" packages="3" files="7" classes="7"/>
+<coverage generated="1729733069224" clover="3.2.0">
+  <project timestamp="1729733069224" name="All files">
+    <metrics statements="62" coveredstatements="62" conditionals="19" coveredconditionals="19" methods="20" coveredmethods="20" elements="101" coveredelements="101" complexity="0" loc="62" ncloc="62" packages="3" files="7" classes="7"/>
     <package name="libreria">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="C:\Users\ASUS\Documents\Proyecto_sistema\Proyecto1_Sistemas_web\libreria\index.ts">
@@ -15,27 +15,31 @@
       </file>
     </package>
     <package name="libreria.strategy">
-      <metrics statements="22" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="9"/>
+      <metrics statements="26" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="12"/>
       <file name="validacionFactory.ts" path="C:\Users\ASUS\Documents\Proyecto_sistema\Proyecto1_Sistemas_web\libreria\strategy\validacionFactory.ts">
-        <metrics statements="18" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="6"/>
+        <metrics statements="22" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9"/>
         <line num="2" count="6" type="stmt"/>
         <line num="3" count="6" type="stmt"/>
         <line num="4" count="6" type="stmt"/>
         <line num="5" count="6" type="stmt"/>
-        <line num="14" count="13" type="stmt"/>
-        <line num="15" count="13" type="stmt"/>
+        <line num="14" count="20" type="stmt"/>
+        <line num="15" count="20" type="stmt"/>
         <line num="20" count="6" type="stmt"/>
         <line num="22" count="2" type="stmt"/>
         <line num="27" count="6" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
         <line num="34" count="6" type="stmt"/>
         <line num="36" count="2" type="stmt"/>
         <line num="41" count="6" type="stmt"/>
-        <line num="43" count="3" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
         <line num="48" count="6" type="stmt"/>
         <line num="50" count="2" type="stmt"/>
         <line num="55" count="6" type="stmt"/>
-        <line num="57" count="4" type="stmt"/>
+        <line num="57" count="3" type="stmt"/>
+        <line num="62" count="6" type="stmt"/>
+        <line num="64" count="2" type="stmt"/>
+        <line num="69" count="6" type="stmt"/>
+        <line num="71" count="4" type="stmt"/>
       </file>
       <file name="validacionStrategy.ts" path="C:\Users\ASUS\Documents\Proyecto_sistema\Proyecto1_Sistemas_web\libreria\strategy\validacionStrategy.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
@@ -46,20 +50,24 @@
       </file>
     </package>
     <package name="libreria.validacion">
-      <metrics statements="26" coveredstatements="26" conditionals="19" coveredconditionals="19" methods="6" coveredmethods="6"/>
+      <metrics statements="30" coveredstatements="30" conditionals="19" coveredconditionals="19" methods="8" coveredmethods="8"/>
       <file name="dateValidacion.ts" path="C:\Users\ASUS\Documents\Proyecto_sistema\Proyecto1_Sistemas_web\libreria\validacion\dateValidacion.ts">
         <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="3" count="6" type="stmt"/>
         <line num="5" count="6" type="cond" truecount="2" falsecount="0"/>
       </file>
       <file name="numberValidacion.ts" path="C:\Users\ASUS\Documents\Proyecto_sistema\Proyecto1_Sistemas_web\libreria\validacion\numberValidacion.ts">
-        <metrics statements="6" coveredstatements="6" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <metrics statements="10" coveredstatements="10" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="4"/>
         <line num="3" count="6" type="stmt"/>
         <line num="5" count="5" type="cond" truecount="3" falsecount="0"/>
         <line num="6" count="3" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
         <line num="12" count="6" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="26" count="6" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
       </file>
       <file name="objectValidacion.ts" path="C:\Users\ASUS\Documents\Proyecto_sistema\Proyecto1_Sistemas_web\libreria\validacion\objectValidacion.ts">
         <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>

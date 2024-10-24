@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.44% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>17/18</span>
+                <span class='fraction'>22/22</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">85.71% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/7</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.44% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>17/18</span>
+                <span class='fraction'>22/22</span>
             </div>
         
             
@@ -124,7 +124,21 @@
 <a name='L59'></a><a href='#L59'>59</a>
 <a name='L60'></a><a href='#L60'>60</a>
 <a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
@@ -137,8 +151,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -152,7 +166,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -186,7 +214,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { ValidacionStrategy } from "./validacionStrategy";
-import { NumberValidacion,PositivoNumberValidacion} from "../validacion/numberValidacion";
+import { NumberValidacion,PositivoNumberValidacion,ParNumberValidacion,ImparNumberValidacion} from "../validacion/numberValidacion";
 import { ObjectValidacion } from "../validacion/objectValidacion";
 import { StringValidacion,NombreStringValidacion} from "../validacion/stringValidacion";
 import { DateValidacion } from "../validacion/dateValidacion";
@@ -212,8 +240,22 @@ export class NumberValidacionFactory extends Creador&lt;number&gt; {
 &nbsp;
 // Implementación concreta del Factory para validación de números positivos
 export class PositivoNumberValidacionFactory extends Creador&lt;number&gt; {
-  public <span class="fstat-no" title="function not covered" >createValidacion(</span>): ValidacionStrategy&lt;number&gt; {
-<span class="cstat-no" title="statement not covered" >    return new PositivoNumberValidacion();</span>
+  public createValidacion(): ValidacionStrategy&lt;number&gt; {
+    return new PositivoNumberValidacion();
+  }
+}
+&nbsp;
+// Implementación concreta del Factory para validación de números pares
+export class ParNumberValidacionFactory extends Creador&lt;number&gt; {
+  public createValidacion(): ValidacionStrategy&lt;number&gt; {
+    return new ParNumberValidacion();
+  }
+}
+&nbsp;
+// Implementación concreta del Factory para validación de números impares
+export class ImparNumberValidacionFactory extends Creador&lt;number&gt; {
+  public createValidacion(): ValidacionStrategy&lt;number&gt; {
+    return new ImparNumberValidacion();
   }
 }
 &nbsp;
@@ -253,7 +295,7 @@ export class NombreStringValidacionFactory extends Creador&lt;string&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-10-24T01:15:08.920Z
+                at 2024-10-24T01:24:29.154Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

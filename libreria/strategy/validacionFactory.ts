@@ -4,6 +4,7 @@ import { ObjectValidacion } from "../validacion/objectValidacion";
 import { StringValidacion,NombreStringValidacion} from "../validacion/stringValidacion";
 import { DateValidacion } from "../validacion/dateValidacion";
 
+
 /**
  * Clase abstracta que define el método Factory para crear estrategias de validación.
  * @template T El tipo de dato generico.

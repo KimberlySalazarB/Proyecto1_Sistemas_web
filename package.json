@@ -1,7 +1,7 @@
 {
   "name": "proyecto",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.js", 
   "scripts": {
     "test": "jest --config jest.config.js"
   },

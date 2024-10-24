@@ -175,7 +175,7 @@ npm install proyecto-libreria-validacion-e
 ```
 5. Usarlo en el codigo:
 
-Ejemplo de empleación:
+Ejemplo de implementación:
 
 ```
 import { NumberValidacion} from 'proyecto-libreria-validacion-e/dist/validacion/numberValidacion.js'

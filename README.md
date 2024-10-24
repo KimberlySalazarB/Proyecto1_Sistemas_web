@@ -88,7 +88,7 @@ En este proyecto de **librería de validación de datos en TypeScript**, se a se
 ```
 Al ejecutar esta prueba fallará porque aún no se implemento:
 
-![](error.PNG)
+![](imagenes/error.PNG)
 
 2. **Implementamos la funcionalidad:** 
 
@@ -115,7 +115,7 @@ export class MayorQueNumberValidacion implements ValidacionStrategy<number> {
 
 Al ejecutar las pruebas nuevamente:
 
-![](exito.PNG)
+![](imagenes/exito.PNG)
 
 
 
@@ -201,4 +201,4 @@ console.log('¿La fecha es válida?', validarfecha);
 
 Como resultado se obtiene:
 
-![](ejemplouso.PNG)
+![](imagenes/ejemplouso.PNG)

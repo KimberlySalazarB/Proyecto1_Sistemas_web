@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es6",     
+    "esModuleInterop": true,
+    "module":"CommonJS",
+    "moduleResolution": "node",                              
+    "noImplicitAny": true,
+    "strict": true,    
+    "outDir": "./dist",
+    "rootDir": "./libreria",
+    "types": ["jest","node"],
+    "skipLibCheck": true                                 
+  },
+
+  "include": ["libreria/**/*.ts"],
+  "exclude": ["node_module","dist"]
+
+}

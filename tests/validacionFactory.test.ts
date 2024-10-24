@@ -1,6 +1,6 @@
 
 import {NumberValidacionFactory,PositivoNumberValidacionFactory,ParNumberValidacionFactory,ImparNumberValidacionFactory,StringValidacionFactory,
-    ObjectValidacionFactory,DateValidacionFactory,NombreStringValidacionFactory } from "../libreria";
+    ObjectValidacionFactory,DateValidacionFactory,NombreStringValidacionFactory,MayorQueNumberValidacionFactory } from "../libreria";
 
 // Descripción del bloque de pruebas
 describe('NumberValidacionFactory', () => {
@@ -61,6 +61,15 @@ describe('NumberValidacionFactory', () => {
         const noesImparPar=Impar.realizarValidacion(2);
         expect(esImparPar).toBe(true);
         expect(noesImparPar).toBe(false);
+    });
+    
+    //validación de números mayores a un valor dado
+    test('Debe validar un número mayor que un valor dado', () => {
+        const validacion = new MayorQueNumberValidacionFactory(10);
+        const esMayor=validacion.realizarValidacion(20);
+        const esMenor=validacion.realizarValidacion(3);
+        expect(esMayor).toBe(true);
+        expect(esMenor).toBe(false);
     });
 });
 

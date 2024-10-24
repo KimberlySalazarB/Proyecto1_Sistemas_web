@@ -28,3 +28,16 @@ export class ImparNumberValidacion implements ValidacionStrategy<number> {
       return value % 2 !== 0;
     }
 }
+
+// Estrategia de validar números mayores a un valor dado
+export class MayorQueNumberValidacion implements ValidacionStrategy<number> {
+    private minValue: number;
+  
+    constructor(minValue: number) {
+      this.minValue = minValue;
+    }
+  
+    validar(value: number): boolean {
+      return value > this.minValue;
+    }
+}

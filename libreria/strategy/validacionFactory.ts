@@ -1,5 +1,5 @@
 import { ValidacionStrategy } from "./validacionStrategy";
-import { NumberValidacion,PositivoNumberValidacion,ParNumberValidacion,ImparNumberValidacion} from "../validacion/numberValidacion";
+import { NumberValidacion,PositivoNumberValidacion,ParNumberValidacion,ImparNumberValidacion,MayorQueNumberValidacion} from "../validacion/numberValidacion";
 import { ObjectValidacion } from "../validacion/objectValidacion";
 import { StringValidacion,NombreStringValidacion} from "../validacion/stringValidacion";
 import { DateValidacion } from "../validacion/dateValidacion";
@@ -41,6 +41,19 @@ export class ParNumberValidacionFactory extends Creador<number> {
 export class ImparNumberValidacionFactory extends Creador<number> {
   public createValidacion(): ValidacionStrategy<number> {
     return new ImparNumberValidacion();
+  }
+}
+
+// Implementación concreta del Factory para validación de números mayores a un valor dado
+export class MayorQueNumberValidacionFactory extends Creador<number> {
+  private minValue: number;
+  constructor(minValue: number) {
+    super();
+    this.minValue = minValue;
+  }
+
+  public createValidacion(): ValidacionStrategy<number> {
+    return new MayorQueNumberValidacion(this.minValue);
   }
 }
 

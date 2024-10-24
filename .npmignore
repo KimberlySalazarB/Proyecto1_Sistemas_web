@@ -1,0 +1,15 @@
+# Excluir la carpeta de cobertura de pruebas
+coverage/
+
+# Excluir imágenes
+*.png
+
+# Excluir archivos de configuración de pruebas y TypeScript
+jest.config.*
+tsconfig.json
+
+# Excluir archivos de pruebas
+tests/
+
+# Excluir archivos que no sean necesarios para el uso de la librería
+ejemplo.js

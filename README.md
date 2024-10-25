@@ -162,7 +162,7 @@ Fase Verde: Implementamos una solución sin procuparse por la optimización, lo 
 
 Fase Refactor: Refactorizamos el codigo implementado para optimizar.
 
-![](imagenes/refactorizarlongitud.PNG)
+![](imagenes/refactorizacionLongitudString.PNG)
 
 Resultado:
 

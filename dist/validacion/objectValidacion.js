@@ -11,3 +11,28 @@ export class ObjectValidacion {
         return value !== null && typeof value == 'object';
     }
 }
+//Clase que implementa la validación de objeto contenga campos requeridos
+/*ANTES
+export class ObjectCamposValidacion implements ValidacionStrategy<object>{
+
+    constructor(private requerimientos: string[]) {}
+
+    validar(data: object): boolean {
+        if(data!==null){
+            return this.requerimientos.every((campo)=> campo in data);
+            
+        }else{
+           return false
+        }
+    }
+}
+*/
+//DESPUES
+export class ObjectCamposValidacion {
+    constructor(requerimientos) {
+        this.requerimientos = requerimientos;
+    }
+    validar(data) {
+        return data !== null && this.requerimientos.every((campo) => campo in data);
+    }
+}

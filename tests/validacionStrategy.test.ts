@@ -19,6 +19,7 @@ describe('ValidacionContext', () => {
       context.establecerStrategy(numberValidacion);
       expect(context.validar(123)).toBe(true);
     });
+
 });
 
 

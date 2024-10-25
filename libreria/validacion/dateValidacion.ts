@@ -1,8 +1,7 @@
 import { ValidacionStrategy } from "../strategy/validacionStrategy";
 
-/**
- * Clase que implementa la estrategia de validación de fechas.
- */
+
+//Clase que implementa la estrategia de validación de fechas.
 export class DateValidacion implements ValidacionStrategy<Date>{
 
     /**
@@ -13,6 +12,28 @@ export class DateValidacion implements ValidacionStrategy<Date>{
 
     validar(value: Date): boolean {
         return value instanceof Date && !isNaN(value.getTime());
+    }
+}
+
+//Clase que implementa la estrategia para la validación de fechas pasadas.
+
+// ANTES
+/*
+export class DatePasadaValidacion implements ValidacionStrategy<Date>{
+    validar(input: Date): boolean {
+        if(input < new Date()){
+            return true
+        }
+        return false
+    }
+
+}
+*/
+
+//DESPUES- Refactorizar
+export class DatePasadaValidacion implements ValidacionStrategy<Date>{
+    validar(input: Date): boolean {
+        return input < new Date();
     }
 }
 

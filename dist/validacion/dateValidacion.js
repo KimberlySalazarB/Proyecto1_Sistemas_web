@@ -1,6 +1,4 @@
-/**
- * Clase que implementa la estrategia de validación de fechas.
- */
+//Clase que implementa la estrategia de validación de fechas.
 export class DateValidacion {
     /**
      * Valida si el valor dado es una fecha válida.
@@ -9,5 +7,24 @@ export class DateValidacion {
      */
     validar(value) {
         return value instanceof Date && !isNaN(value.getTime());
+    }
+}
+//Clase que implementa la estrategia para la validación de fechas pasadas.
+// ANTES
+/*
+export class DatePasadaValidacion implements ValidacionStrategy<Date>{
+    validar(input: Date): boolean {
+        if(input < new Date()){
+            return true
+        }
+        return false
+    }
+
+}
+*/
+//DESPUES- Refactorizar
+export class DatePasadaValidacion {
+    validar(input) {
+        return input < new Date();
     }
 }

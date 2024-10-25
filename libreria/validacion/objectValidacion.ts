@@ -1,5 +1,6 @@
 import { ValidacionStrategy } from "../strategy/validacionStrategy";
 
+
 /**
  * Clase que implementa la validación de objetos.
  */
@@ -15,3 +16,31 @@ export class ObjectValidacion implements ValidacionStrategy<object>{
     }
 }
 
+
+//Clase que implementa la validación de objeto contenga campos requeridos
+
+/*ANTES
+export class ObjectCamposValidacion implements ValidacionStrategy<object>{
+
+    constructor(private requerimientos: string[]) {}
+
+    validar(data: object): boolean {
+        if(data!==null){
+            return this.requerimientos.every((campo)=> campo in data);
+            
+        }else{
+           return false
+        }
+    }
+}
+*/
+//DESPUES
+export class ObjectCamposValidacion implements ValidacionStrategy<object>{
+
+    constructor(private requerimientos: string[]) {}
+
+    validar(data: object): boolean {
+        return data!==null && this.requerimientos.every((campo)=> campo in data)
+    }
+
+}

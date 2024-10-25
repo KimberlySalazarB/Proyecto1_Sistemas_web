@@ -1,4 +1,4 @@
-import { NumberValidacion,PositivoNumberValidacion, ParNumberValidacion,MayorQueNumberValidacion,ImparNumberValidacion} from "../libreria";
+import { NumberValidacion,PositivoNumberValidacion, ParNumberValidacion,MayorQueNumberValidacion,ImparNumberValidacion,RangoNumberValidacion} from "../libreria";
 
 //validacion de numero
 describe('NumberValidacion',()=>{
@@ -35,4 +35,11 @@ describe('NumberValidacion',()=>{
         expect(validacion.validar(20)).toBe(true);
         expect(validacion.validar(5)).toBe(false);
     });
+
+    //validación de numeros en un determinado rango
+    test('Debe validar un número que esta dentro del rango',()=>{
+        const validacionrang=new RangoNumberValidacion(5,20);
+        expect(validacionrang.validar(6)).toBe(true);
+        expect(validacionrang.validar(50)).toBe(false);
+    })
 });

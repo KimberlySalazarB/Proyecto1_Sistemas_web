@@ -74,6 +74,10 @@ En este proyecto de **librería de validación de datos en TypeScript**, se a se
 3. **Implementar la funcionalidad**: Se desarrolla el código necesario para hacer que la prueba pase. 
 4. **Ejecutar las pruebas**: Se vuelve a ejecutar las pruebas para asegurar de que la nueva funcionalidad cumple con las expectativas y no ha haya fallado en  ninguna funcionalidad existente.
 
+5. **Refactorizar la implementación existente**: Se realiza mejoras al codigo de forma que sea más eficiente, con codigo más descriptivo o más rapido.
+
+![](imagenes/red-verde-refactory.PNG)
+
 ### Ejemplo de aplicación de TDD:
 
 1. **Prueba**:
@@ -116,6 +120,100 @@ export class MayorQueNumberValidacion implements ValidacionStrategy<number> {
 Al ejecutar las pruebas nuevamente:
 
 ![](imagenes/exito.PNG)
+
+### **Otras interacciones con el RGR de TDD**
+
+1. DatePasadaValidacion
+
+Fase Roja: Se escribe una prueba DatePasadaValidacion, al ejecutar saldra el mensaje de error.
+
+![](imagenes/error1.PNG)
+
+![](imagenes/error.PNG)
+
+Fase Verde: Implementamos una solución sin procuparse por la optimización, lo importante es poder pasar la prueba. Obteniendo pasar prueba.
+
+![](imagenes/implementacionclase.PNG)
+
+![](imagenes/hacerpruebaverde.PNG)
+
+Fase Refactor: Refactorizamos el codigo implementado para optimizar.
+
+![](imagenes/refactorizardatepasada.PNG)
+
+Resultado:
+
+![](imagenes/despuesdeRefa.PNG)
+
+
+2. LongitudStringValidacion
+
+Fase Roja: Se escribe una prueba LongitudStringValidacion, al ejecutar saldra el mensaje de error.
+
+![](imagenes/testlongitud.PNG)
+
+![](imagenes/errorLongitud.PNG)
+
+Fase Verde: Implementamos una solución sin procuparse por la optimización, lo importante es poder pasar la prueba. Obteniendo pasar prueba.
+
+![](imagenes/implementacionlongitud.PNG)
+
+![](imagenes/verdelongitud.PNG)
+
+Fase Refactor: Refactorizamos el codigo implementado para optimizar.
+
+![](imagenes/refactorizarlongitud.PNG)
+
+Resultado:
+
+![](imagenes/refactorizarlongitud.PNG)
+
+
+3. ObjetoCampoValidacion
+
+Fase Roja: Se escribe una prueba ObjetoCampoValidacion, al ejecutar saldra el mensaje de error.
+
+![](imagenes/testobjetocampo.PNG)
+
+![](imagenes/errorobjetocampos.PNG)
+
+Fase Verde: Implementamos una solución sin procuparse por la optimización, lo importante es poder pasar la prueba. Obteniendo pasar prueba.
+
+![](imagenes/implementacionobjetocampo.PNG)
+
+![](imagenes/verdeobjetocampo.PNG)
+
+Fase Refactor: Refactorizamos el codigo implementado para optimizar.
+
+![](imagenes/refactorizarobjetocampo.PNG)
+
+Resultado:
+
+![](imagenes/objectorefactorizacion.PNG)
+
+
+4. 
+
+Fase Roja: Se escribe una prueba ObjetoCampoValidacion, al ejecutar saldra el mensaje de error.
+
+![](imagenes/testRango.PNG)
+
+![](imagenes/errorrango.PNG)
+
+Fase Verde: Implementamos una solución sin procuparse por la optimización, lo importante es poder pasar la prueba. Obteniendo pasar prueba.
+
+![](imagenes/rangoimplementa.PNG)
+
+![](imagenes/verderango.PNG)
+
+Fase Refactor: Refactorizamos el codigo implementado para optimizar.
+
+![](imagenes/refacrango.PNG)
+
+Resultado:
+
+![](imagenes/refactorizarrango.PNG)
+
 
 
 

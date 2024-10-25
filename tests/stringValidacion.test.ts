@@ -1,4 +1,4 @@
-import { StringValidacion,NombreStringValidacion} from "../libreria";
+import { StringValidacion,NombreStringValidacion,LongitudStringValidacion} from "../libreria";
 
 describe('StringValidacion',()=>{
     test('Debe validar una cadena no vacia',()=>{
@@ -13,5 +13,11 @@ describe('StringValidacion',()=>{
         expect(validacion.validar('1L')).toBe(false);
         expect(validacion.validar('1L345H')).toBe(false);
     });
+
+    test('Debe validar la longitud de una cadena no exceda al maximo',()=>{
+        const validacionlong=new LongitudStringValidacion(5); 
+        expect(validacionlong.validar("Elena")).toBe(true);
+        expect(validacionlong.validar("Hola Mundo")).toBe(false);
+    })
 
 })
